@@ -83,4 +83,12 @@ export default class MainController
         return this.stageContainer;
     }
 
+    public resizeRenderer(width:number, height:number):void
+    {
+        if(this.app.renderer)
+        {
+            this.app.renderer.resize(width, height);
+        }
+    }
+
 }

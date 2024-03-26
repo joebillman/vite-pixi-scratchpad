@@ -76,8 +76,9 @@ function resize()
     }
     targetWidth = desiredWidth * targetScale;
     targetHeight = desiredHeight * targetScale;
+    stage.resizeRenderer(targetWidth, targetHeight);
+    stage.scale.set(targetScale);
     document.getElementById("pixi-canvas").setAttribute("width", targetWidth.toString());
     document.getElementById("pixi-canvas").setAttribute("height", targetHeight.toString());
     //document.getElementById("pixi-canvas").style.width = targetWidth.toString() + "px";
-    stage.scale.set(targetScale);
 }
