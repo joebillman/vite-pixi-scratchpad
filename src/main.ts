@@ -1,8 +1,7 @@
 import MainController from "./controllers/MainController.ts";
 
 let app:MainController;
-let curWindowWidth;
-let curWindowHeight;
+let curWindowWidth = 0;
 let defaultWidth = 1366;
 let defaultHeight = 768;
 let isHD = false;
@@ -16,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function ():void
 function captureCurrentDimensions():void
 {
     curWindowWidth = screen.width < window.innerWidth ? screen.width : window.innerWidth;
-    curWindowHeight = screen.height < window.innerHeight ? screen.height : window.innerHeight;
 }
 
 function createApp():void
@@ -42,12 +40,10 @@ function resize()
     captureCurrentDimensions();
     let desiredWidth = (isHD) ? defaultWidth*2 : defaultWidth;
     let desiredHeight = (isHD) ? defaultHeight*2 : defaultHeight;
-    let headerAndFooterHeightTotal = 0;
     let padding = 0;
     let targetHeight = defaultHeight;
     let targetScale = 1;
-    let targetWidth = defaultWidth
-    let usableHeight = curWindowHeight - headerAndFooterHeightTotal - padding;
+    let targetWidth = defaultWidth;
     let usableWidth = curWindowWidth - padding;
 
     targetScale = usableWidth / desiredWidth;
@@ -60,25 +56,7 @@ function resize()
         targetScale = .001;
     }
     stage.scale.set(targetScale);
-
-    targetHeight = desiredHeight * targetScale;
-    if(targetHeight > usableHeight)
-    {
-        targetScale = usableHeight / desiredHeight;
-    }
-    if(targetScale > 1)
-    {
-        targetScale = 1;
-    }
-    if(targetScale <= 0)
-    {
-        targetScale = .001;
-    }
     targetWidth = desiredWidth * targetScale;
     targetHeight = desiredHeight * targetScale;
-    app.resizeRenderer(targetWidth, targetHeight);
-    stage.scale.set(targetScale);
-    document.getElementById("pixi-canvas").setAttribute("width", targetWidth.toString());
-    document.getElementById("pixi-canvas").setAttribute("height", targetHeight.toString());
-    //document.getElementById("pixi-canvas").style.width = targetWidth.toString() + "px";
+    app.resize(targetWidth, targetHeight);
 }

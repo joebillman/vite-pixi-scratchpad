@@ -15,7 +15,6 @@ export default class MainController
 
     private app:Application;
     private readonly canvasId:string;
-    private stageContainer:Container;
 
     //--------------------------------------------------------------------------
     //
@@ -55,15 +54,8 @@ export default class MainController
     private createMainScene():void
     {
         const mainScene = new MainScene();
-        this.stageContainer.addChild(mainScene);
+        this.app.stage.addChild(mainScene);
         mainScene.create();
-    }
-
-    private createStageContainer():void
-    {
-        this.stageContainer = new Container();
-        this.stageContainer.pivot.set(0.5);
-        this.app.stage.addChild(this.stageContainer);
     }
 
     //----------------------------------
@@ -73,7 +65,6 @@ export default class MainController
     public create(completionCallback:Function):void
     {
         this.createApp().then(() => {
-            this.createStageContainer();
             this.createMainScene();
             completionCallback();
         });
@@ -81,10 +72,10 @@ export default class MainController
 
     public getStage():Container
     {
-        return this.stageContainer;
+        return this.app.stage;
     }
 
-    public resizeRenderer(width:number, height:number):void
+    public resize(width:number, height:number):void
     {
         if(this.app.renderer)
         {
