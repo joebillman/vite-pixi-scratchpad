@@ -62,6 +62,7 @@ export default class MainController
     private createStageContainer():void
     {
         this.stageContainer = new Container();
+        this.stageContainer.pivot.set(0.5);
         this.app.stage.addChild(this.stageContainer);
     }
 
