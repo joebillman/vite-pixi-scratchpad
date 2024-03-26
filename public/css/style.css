@@ -1,0 +1,24 @@
+:root
+{
+    --bgColor:#000000;
+}
+
+html, body
+{
+    width:100%;
+    height:100%;
+    margin:0;
+    padding:0;
+    background-color:var(--bgColor);
+}
+
+#canvas-container
+{
+    background-color:var(--bgColor);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    height:100%;
+}

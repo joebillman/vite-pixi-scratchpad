@@ -1,0 +1,76 @@
+{"frames": {
+
+"elephant.png":
+{
+	"frame": {"x":1,"y":1,"w":273,"h":274},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":32,"y":32,"w":273,"h":274},
+	"sourceSize": {"w":336,"h":336}
+},
+"frog.png":
+{
+	"frame": {"x":783,"y":264,"w":170,"h":195},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":84,"y":110,"w":170,"h":195},
+	"sourceSize": {"w":336,"h":336}
+},
+"koala.png":
+{
+	"frame": {"x":1,"y":277,"w":233,"h":258},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":52,"y":46,"w":233,"h":258},
+	"sourceSize": {"w":336,"h":336}
+},
+"lemur.png":
+{
+	"frame": {"x":770,"y":1,"w":252,"h":261},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":41,"y":39,"w":252,"h":261},
+	"sourceSize": {"w":336,"h":336}
+},
+"monkey.png":
+{
+	"frame": {"x":504,"y":1,"w":264,"h":268},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":35,"y":29,"w":264,"h":268},
+	"sourceSize": {"w":336,"h":336}
+},
+"snake.png":
+{
+	"frame": {"x":276,"y":1,"w":226,"h":269},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":57,"y":36,"w":226,"h":269},
+	"sourceSize": {"w":336,"h":336}
+},
+"tiger.png":
+{
+	"frame": {"x":513,"y":271,"w":240,"h":268},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":48,"y":38,"w":240,"h":268},
+	"sourceSize": {"w":336,"h":336}
+},
+"tucan.png":
+{
+	"frame": {"x":261,"y":277,"w":250,"h":233},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":43,"y":73,"w":250,"h":233},
+	"sourceSize": {"w":336,"h":336}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.1",
+	"image": "avatars@2x_0.png",
+	"format": "RGBA8888",
+	"size": {"w":1023,"h":512},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:137f7889d7581473e4ba4efdad200428:44e5d2d69fc9729adaabd9810f8abafe:f06090ce0eaac1c292688b808c9b1012$"
+}
+}
