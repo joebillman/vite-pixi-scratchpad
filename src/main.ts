@@ -9,6 +9,17 @@ let stage:any;
 
 document.addEventListener('DOMContentLoaded', function ():void
 {
+    let body2 = {
+        fontSize: "16px",
+        fontWeight: "500",
+    };
+    let marginLeft24 = {
+        marginLeft: "24px",
+    };
+    let combined  = {...body2, ...marginLeft24};
+
+    debugger;
+    console.log(Math.floor((window.outerWidth / window.innerWidth) * 100));
     createApp();
 });
 
